@@ -98,6 +98,7 @@ public class Setup {
         || className.startsWith("com.android.internal.")
         || className.startsWith("com.google.android.maps.")
         || className.startsWith("com.google.android.gms.")
+        || className.startsWith("com.google.android.youtube.")
         || className.startsWith("dalvik.system.")
         || className.startsWith("org.apache.http.impl.client.DefaultRequestDirector");
   }
