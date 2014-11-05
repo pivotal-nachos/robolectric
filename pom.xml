@@ -222,7 +222,7 @@
           <excludes>
             <exclude>**/Test*.java</exclude>
           </excludes>
-          <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=256m</argLine>
+          <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=256m -noverify</argLine>
         </configuration>
       </plugin>
 
