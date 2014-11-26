@@ -94,6 +94,7 @@ public class Setup {
         || className.startsWith("com.google.android.gms.")
         || className.startsWith("com.google.android.youtube.")
         || className.startsWith("dalvik.system.")
+        || className.startsWith("com.samsung.android.sdk.look.")
         || className.startsWith("org.apache.http.impl.client.DefaultRequestDirector");
   }
 
