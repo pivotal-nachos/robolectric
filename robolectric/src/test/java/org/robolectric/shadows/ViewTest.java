@@ -366,6 +366,7 @@ public class ViewTest {
     assertThat(listener.wasStartCalled).isTrue();
     assertThat(listener.wasRepeatCalled).isFalse();
     assertThat(listener.wasEndCalled).isFalse();
+    assertThat(anim.hasStarted()).isTrue();
     view.clearAnimation();
     assertThat(listener.wasStartCalled).isTrue();
     assertThat(listener.wasRepeatCalled).isFalse();

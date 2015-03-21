@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewParent;
+import android.view.animation.Animation;
 import org.robolectric.Robolectric;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -403,6 +404,12 @@ public class ShadowView {
   @Implementation
   public float getScaleY() {
     return scaleY;
+  }
+
+  @Implementation
+  public void startAnimation(Animation animation) {
+    Robolectric.directlyOn(realView, View.class).startAnimation(animation);
+    shadowOf(animation).start();
   }
 
   @Implementation
