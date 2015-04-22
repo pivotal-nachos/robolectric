@@ -22,6 +22,16 @@ public class ShadowAbsListView extends ShadowAdapterView {
   }
 
   @Implementation
+  public void smoothScrollToPositionFromTop(int position, int offset) {
+    smoothScrolledPosition = position;
+  }
+
+  @Implementation
+  public void smoothScrollToPositionFromTop(int position, int offset, int duration) {
+    smoothScrolledPosition = position;
+  }
+
+  @Implementation
   public void smoothScrollBy(int distance, int duration) {
     this.lastSmoothScrollByDistance = distance;
     this.lastSmoothScrollByDuration = duration;

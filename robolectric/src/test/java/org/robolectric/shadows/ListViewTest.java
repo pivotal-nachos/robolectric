@@ -389,6 +389,18 @@ public class ListViewTest {
   }
 
   @Test
+  public void shouldRecordLatestCallToSmoothScrollToPostionFromTop() throws Exception {
+    listView.smoothScrollToPositionFromTop(10, 0);
+    assertThat(shadowOf(listView).getSmoothScrolledPosition()).isEqualTo(10);
+  }
+
+  @Test
+  public void shouldRecordLatestCallToSmoothScrollToPostionFromTop_whenIncludingDuration() throws Exception {
+    listView.smoothScrollToPositionFromTop(10, 0, 0);
+    assertThat(shadowOf(listView).getSmoothScrolledPosition()).isEqualTo(10);
+  }
+
+  @Test
   public void givenChoiceModeIsSingle_whenGettingCheckedItemPosition_thenReturnPosition() {
     prepareListAdapter().withChoiceMode(ListView.CHOICE_MODE_SINGLE).withAnyItemChecked();
 
